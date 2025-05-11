@@ -1,0 +1,107 @@
+.hero {
+    position: relative;
+    width: 1905px;
+    height: 1000px;
+    overflow: hidden;
+    /* margin: 100px auto 0 auto; */
+    margin: auto;
+    font-family: FreightTextCmp Pro;
+  }
+  
+  .video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  } 
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h1, p{
+    font-size: 96px;
+    font-weight: 600;
+  }
+  
+
+  .section2 {
+    width: 1905px;
+    height: 1021px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .section2Content {
+    width: 503px;
+    height: 866px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+
+  .section2head {
+    font-size: 50px;
+    font-weight: 600;
+    color: #181852;
+  }
+
+  .section2image {
+    width: 503px;
+    height: 749px;
+  }
+
+
+  .section3 {
+    width: 1905px;
+    height: 1100px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #181852;
+    padding: 50px 0;
+  }
+
+  .read{
+    width: 1553px;
+    font-size: 50px;
+    font-weight: 600;
+    color: #F8ECDB;
+  }
+
+  .main {
+    position: relative;
+    width: 1553px;
+    height: 907px;
+    /* margin: 100px auto 0 auto; */
+    margin: auto;
+    font-family: FreightTextCmp Pro;
+    display: flex;
+    justify-content: center;
+  }
+
+  .imgred {
+    position: absolute;
+  }
+
+  .section3heading{
+    width: 650px;
+    height: 213px;
+    font-size: 72px;
+    font-weight: 700;
+    margin: 250px 0 0 0;
+    text-align: center;
+  }

@@ -1,0 +1,429 @@
+/* Ensure body and html take full height and width */
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+/* Additional global reset for body and html to prevent overflow */
+/* body, html {
+  margin: 0;
+  
+  height: 100%;
+  
+} */
+
+/* Flex container to structure the page */
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color:rgb(30, 30, 30); /* Dark background for entire page */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+/* Main content area will expand */
+main {
+  flex: 1;
+}
+
+/* Header and navigation styles */
+header {
+  background: #1f1f1f;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-bottom: 1px solid #333;
+}
+
+/* Ensure logo stays on the left */
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-right: 20px; /* Add some space between logo and nav */
+}
+
+
+/* Ensure header uses flex for centering */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #000; /* dark navbar */
+  flex-wrap: wrap;
+}
+
+/* Centered search bar */
+.search-container {
+  flex: 1;
+  text-align: center;
+}
+
+#searchInput {
+  padding: 8px 16px;
+  border: none;
+  background-color: #111; /* slightly lighter than #000 */
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 60%;
+  max-width: 400px;
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Outline on focus */
+#searchInput:focus {
+  box-shadow: 0 0 0 2px #00ffcc;
+}
+
+
+
+/* Navigation links container */
+nav {
+  display: flex;
+  align-items: center; /* Align the links vertically centered */
+}
+
+/* Links styles */
+nav a {
+  margin-left: 20px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffcc;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #ccc;
+}
+
+
+/* Hero section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* dark overlay for readability */
+  z-index: -1;
+}
+
+
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff; /* White title text */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd; /* Light gray for paragraph text */
+}
+
+.play-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: #00ffcc;
+  color: #000; /* Keep button text dark for contrast */
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.play-btn:hover {
+  background: #03caa6;
+}
+
+/*category Section*/
+.categories {
+  padding: 3rem 1rem;
+  background-color: #121212;
+  text-align: center;
+  color: #fff;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #f2f2f2;
+}
+
+.category-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.category-buttons button {
+  padding: 0.6rem 1.2rem;
+  background-color: #222;
+  border: 1px solid #333;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.category-buttons button:hover,
+.category-buttons button.active {
+  background-color: #3f3f3f;
+  color: #00ffcc;
+  border-color: #00ffcc;
+}
+
+/* Featured section */
+.featured {
+  padding: 50px 20px;
+  background-color: #1a1a1a; /* Dark background */
+  color: #fff; /* Light text */
+}
+
+.featured h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #fff; /* White heading */
+}
+
+.games-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.game-card {
+  background-color: #2a2a2a; /* Dark card background */
+  color: #fff; /* Light card text */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.game-card:hover {
+  transform: translateY(-5px);
+  background-color: #333;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+/* Featured Section */
+.featured {
+  padding: 60px 0;
+  background-color: #1e1e1e; /* Dark background for the section */
+  text-align: center;
+}
+
+.featured h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/* Grid for Game Cards */
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of cards per row */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Game Card Styling */
+.game-card {
+  position: relative;
+  width: 100%;
+  height: 250px; /* Fixed height for cubic effect */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Text inside the game card */
+.game-card .game-name {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  font-weight: bold;
+  z-index: 1;
+}
+
+/* Hover Effect */
+.game-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+.game-card:hover .game-name {
+  color: #f39c12; /* Change text color on hover */
+}
+
+/* Responsive Grid (for small screens) */
+@media screen and (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .games-grid {
+    grid-template-columns: 1fr; /* 1 card per row */
+  }
+}
+
+
+
+footer {
+  background: #1f1f1f;
+  color: #888;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #333;
+  margin-top: 0px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller screens (mobile phones) */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* Center the items vertically */
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    margin-right: 0; /* No extra space between logo and nav */
+  }
+
+  nav {
+    display: none; /* Hide the links by default */
+    flex-direction: column;
+    align-items: flex-start; /* Align to left when shown */
+    width: 100%; /* Ensure full width of nav */
+    background-color: #333; /* Add background to the menu when shown */
+    position: absolute;
+    top: 60px; /* Position below the header */
+    left: 0;
+    padding: 10px 0;
+  }
+
+  nav a {
+    margin: 10px 0; /* Vertical spacing */
+    padding: 12px;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    text-align: left; /* Align links to the left */
+    background-color: #444;
+  }
+
+  /* Show the nav when the menu icon is clicked */
+  nav.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block; /* Show the hamburger icon */
+    font-size: 2rem;
+    cursor: pointer;
+    color: #ccc;
+  }
+
+  /* Make sure the logo and menu are aligned horizontally centered and placed properly */
+  header {
+    display: flex;
+    justify-content: space-between; /* Logo on the left, menu icon on the right */
+    align-items: center;
+  }
+  
+  /* Adjust the hero section title font size for small devices */
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  /* Adjust featured section heading font size */
+  .featured h2 {
+    font-size: 1.5rem;
+  }
+
+  .games-grid {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .game-card {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 15px;
+  }
+}
+
+
+
+
+/* Prevent horizontal scrolling */
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* Hide overflow on the x-axis (horizontal) */
+}
+
+/* Ensure proper box-sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Includes padding and border within width and height */
+}
+
+
+
+
+
+
+

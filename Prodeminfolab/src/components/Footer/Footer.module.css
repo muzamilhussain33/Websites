@@ -1,0 +1,169 @@
+.footer {
+    width: 1905px;
+    height: 1525px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero {
+    position: relative;
+    width: 1905px;
+    height: 939px;
+    overflow: hidden;
+    /* margin: 100px auto 0 auto; */
+    margin: auto;
+    font-family: FreightTextCmp Pro;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  } 
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .spread{
+    font-size: 110px;
+    font-weight: 600;
+  }
+
+  .subscribe{
+    font-size: 36px;
+  }
+
+  .newsmain{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .reportcontent{
+    font-size: 53px;
+  }
+
+  .newspaper {
+    width: 140px;
+    height: 158px;
+  }
+
+  .btn{
+    width: 186px;
+    height: 73px;
+    justify-self: center;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  .arrowIcon {
+    color: #00005B; /* default color */
+    transition: color 0.3s ease;
+  }
+  
+  .btn:hover  {
+    background-color: #FF455B; /* new color when hover (example: red) */
+  }
+  
+
+  .support {
+    width: 100%;
+    height: 160px;
+    background-color: #FF455B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  .supportcontent{
+    font-size: 73px;
+    color: white;
+  }
+  .supportbtn{
+    width: 213px;
+    height: 94px;
+    background-color: #181852;
+    border: 1px solid #FF759F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 37px;
+    color: white;
+  }
+  
+
+
+  .lower{
+    width: 100%;
+    height: 591px;
+    background-color: #181852;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+  }
+
+  .lowerhead{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 700px;
+    margin-right: 100px;
+  }
+
+  .footconmain{
+    border-right: 2px solid #4747D7 ;
+    width: 400px;
+  }
+
+  .footconmain, .footmain5{
+    color: white;
+    height: 260px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+  }
+
+  .footheadings {
+    font-size: 33px;
+    font-weight: 600;
+  }
+
+  .footcontent {
+    font-size: 25px;
+    font-weight: 400px;
+  }
+
+  .democracy{
+    color: #FF455B;
+    font-size: 25px;
+  }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All Games - Play Rafit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="logo">🎮 Play Rafit</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="games.html" class="active">Games</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="categories">
+      <h1>🕹 All Games</h1>
+      <p>Select a category to filter and start playing!</p>
+
+      <div class="category-buttons">
+        <button data-category="All" class="active">All</button>
+        <button data-category="Puzzle">🧩 Puzzle</button>
+        <button data-category="Strategy">♟ Strategy</button>
+        <button data-category="Arcade">👾 Arcade</button>
+        <button data-category="Shooter">🚀 Shooter</button>
+        <button data-category="Luck">🎲 Luck</button>
+      </div>
+    </section>
+
+    <section class="games-grid" id="gamesGrid">
+      <!-- Game cards will be loaded here dynamically -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Play Rafit. All rights reserved.</p>
+  </footer>
+
+  <script src="js/games.js"></script>
+  <script src="js/displayGames.js"></script>
+</body>
+
+</html>

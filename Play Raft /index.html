@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Play Rafit</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎮 Play Rafit</div>
+    <!-- Hamburger Icon -->
+    <div class="menu-icon" id="menu-icon">
+      &#9776;
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search games..." />
+    </div>
+    
+    <nav id="nav-links" class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="games.html">Games</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    
+  </header>
+  <main>
+    <section class="hero">
+      <h1>Welcome to Play Rafit!</h1>
+      <p>Enjoy exciting games with a slick dark theme built using HTML, CSS, and JavaScript.</p>
+      <a class="play-btn" href="games.html">Start Playing</a>
+    </section>
+
+    <section class="categories">
+  <h2>🎮 Browse by Category</h2>
+  <div class="category-buttons">
+    <button data-category="All" class="active">All</button>
+    <button data-category="Puzzle">🧩 Puzzle</button>
+    <button data-category="Strategy">♟ Strategy</button>
+    <button data-category="Arcade">👾 Arcade</button>
+    <button data-category="Shooter">🚀 Shooter</button>
+    <button data-category="Luck">🎲 Luck</button>
+  </div>
+</section>
+
+<section class="featured">
+  <h2>🔥 Featured Games</h2>
+  <div class="games-grid" id="gamesGrid"></div>
+</section>
+
+    
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Play Rafit. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/games.js"></script>
+<script>
+  const gamesGrid = document.getElementById("gamesGrid");
+
+  games.forEach(game => {
+    const card = document.createElement("div");
+    card.className = "game-card";
+    card.innerHTML = `
+      <a href="${game.link}">
+        <div class="game-image" style="background-image: url('${game.image}')"></div>
+        <div class="game-name">${game.name}</div>
+      </a>
+    `;
+    gamesGrid.appendChild(card);
+  });
+</script>
+
+<script src="js/displayGames.js"></script>
+<script>
+
+
+  // First render the game cards
+  games.forEach(game => {
+    const card = document.createElement("div");
+    card.className = "game-card";
+    card.innerHTML = `
+      <a href="${game.link}">
+        <div class="game-image" style="background-image: url('${game.image}')"></div>
+        <div class="game-name">${game.name}</div>
+      </a>
+    `;
+    gamesGrid.appendChild(card);
+  });
+
+  // Add search functionality AFTER games are added
+  const searchInput = document.getElementById("searchInput");
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    const gameCards = document.querySelectorAll(".game-card");
+
+    gameCards.forEach(card => {
+      const gameName = card.querySelector(".game-name").textContent.toLowerCase();
+      if (gameName.includes(query)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
+
+
+
+</body>
+</html>
