@@ -5,10 +5,10 @@ import ServiceCard from '../components/ServiceCard'
 import { Link } from 'react-router-dom'
 
 function Home() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div>
+    <div className='pt-[80px] min-h-[100vh]'>
       <div
         className="w-full bg-cover bg-center flex items-center justify-center "
         style={{ backgroundImage: `url(${bg})` }}>
@@ -48,7 +48,6 @@ function Home() {
         <ServiceCard btn='View Details'/>
         <ServiceCard btn='View Details'/>
         </div>
-        
       </div>
       </div>
     </div>

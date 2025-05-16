@@ -9,9 +9,9 @@ import Signup from './pages/Signup'
 import Services from './pages/Services'
 import ServiceDetails from './pages/ServiceDetails'
 import Footer from './components/Footer'
+import BookNow from './pages/BookNow'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
@@ -25,6 +25,7 @@ function App() {
         <Route path='/signup' element={<Signup />}/>
         <Route path='/services' element={<Services />}/>
         <Route path='/servicesdetails' element={<ServiceDetails />}/>
+        <Route path='/book-now' element={<BookNow />}/>
       </Routes>
       <Footer/>
     </div>

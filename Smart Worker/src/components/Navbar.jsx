@@ -12,7 +12,7 @@ function Navbar() {
   };
 
   return (
-    <div className="w-full h-[80px]  flex items-center  bg-white shadow-md z-10">
+    <div className="w-full h-[80px]  flex items-center  bg-white shadow-md z-10 fixed mt-0">
 
 
       <div className='w-[1300px] h-full m-auto flex items-center justify-between px-7'>
